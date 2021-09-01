@@ -16,6 +16,10 @@
         <button onclick="loadFileAsText()">Load file</button>
         <button onclick="readEvent()">Read event</button>
         <button onclick="extractAnswers()">extract answers</button>
+        <p id="time">0</p>
+        <input type="button" id="startTimer" value="Start Timer" onclick="start();">
+        <input type="button" id="stopTimer" value="Stop Timer"  onclick="stop();">
+        <input type="button" id="resetTimer" value="Reset Timer"  onclick="reset();"><br/>
     </div>
     <h3>File content</h3>
     <pre id="displayjson">you have to load json file</pre>

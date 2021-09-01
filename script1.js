@@ -1,6 +1,31 @@
 
 var jsonData = {};
-var jsonAthlete = {};
+
+var timeElapsed = 0;
+var timerID = -1;
+function tick() {
+    timeElapsed++
+    document.getElementById("time").innerHTML = timeElapsed;
+}
+
+function start() {
+    if (timerID == -1) {
+        timerID = setInterval(tick, 1000);
+    }
+}
+
+function stop() {
+    if (timerID != -1) {
+        clearInterval(timerID)
+        timerID = -1
+    }
+}
+
+function reset() {
+    stop();
+    timeElapsed = -1;
+    tick()
+}
 
 function loadFileAsText() {
     var fileToLoad = document.getElementById("jsonData").files[0];
@@ -46,10 +71,10 @@ function selectPerson() {
     let form = document.createElement("FORM");   // Create a <form> element
     form.setAttribute("id", "participantsForm");
 
-    let participantsForm = ' <label for="athlete">Choose an Athlete:</label>\n<select name="athlete" id="athlete">\n';
+    let participantsForm = ' <label for="athlete">Athlete id:</label>\n<select name="athlete" id="athlete">\n';
 
     for (let i = 0; i < jsonData.startingrid.length; i++) {
-        let formValue = jsonData.startingrid[i].name;
+        let formValue = jsonData.startingrid[i].id;
 
         participantsForm = participantsForm + '<option value="' + formValue + '">' + formValue + '</option>\n';
 
@@ -65,11 +90,10 @@ function selectPerson() {
 function extractAnswers() {
     let myForm = document.getElementById('pointForm');
     let formData = new FormData(myForm);
-    //formData.append("athlete",document.getElementById("athlete").value);
-    let index = jsonData.startingrid.findIndex(obj => obj.name==document.getElementById('athlete').value);
-    let jsonObject = {"athlete":jsonData.startingrid[index]};
-
-    for (const [key, value]  of formData) {
+    let index = jsonData.startingrid.findIndex(obj => obj.id == document.getElementById('athlete').value);
+    let jsonObject = { "athlete": jsonData.startingrid[index] };
+    formData.append('time',document.getElementById('time').innerHTML);
+    for (const [key, value] of formData) {
         jsonObject[key] = value;
     }
     let jsonAnswers = JSON.stringify(jsonObject);
