@@ -1,5 +1,6 @@
 
-var jsonData;
+var jsonData = {};
+var jsonAthlete = {};
 
 function loadFileAsText() {
     var fileToLoad = document.getElementById("jsonData").files[0];
@@ -16,6 +17,8 @@ function loadFileAsText() {
 }
 
 function readEvent() {
+
+    selectPerson();
 
     var form = document.createElement("FORM");   // Create a <form> element
     form.setAttribute("id", "pointForm");
@@ -36,13 +39,35 @@ function readEvent() {
             document.body.appendChild(form);
         }
     }
+}
 
+function selectPerson() {
+    console.log(jsonData.event.name);
+    let form = document.createElement("FORM");   // Create a <form> element
+    form.setAttribute("id", "participantsForm");
+
+    let participantsForm = ' <label for="athlete">Choose an Athlete:</label>\n<select name="athlete" id="athlete">\n';
+
+    for (let i = 0; i < jsonData.startingrid.length; i++) {
+        let formValue = jsonData.startingrid[i].name;
+
+        participantsForm = participantsForm + '<option value="' + formValue + '">' + formValue + '</option>\n';
+
+    }
+    participantsForm = participantsForm + '</select><br>\n'
+
+    form.innerHTML = participantsForm;
+    if (document.getElementById('participantsForm') == null) { //if this element is not created yet
+        document.body.appendChild(form);
+    }
 }
 
 function extractAnswers() {
     let myForm = document.getElementById('pointForm');
     let formData = new FormData(myForm);
-    let jsonObject = {};
+    //formData.append("athlete",document.getElementById("athlete").value);
+    let index = jsonData.startingrid.findIndex(obj => obj.name==document.getElementById('athlete').value);
+    let jsonObject = {"athlete":jsonData.startingrid[index]};
 
     for (const [key, value]  of formData) {
         jsonObject[key] = value;
