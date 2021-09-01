@@ -1,0 +1,15 @@
+pre {
+    background-color: chartreuse;
+}
+
+form, h1, h3 {
+    text-align: center;
+}
+
+#jsonData {
+    background-color: coral;
+}
+
+body {
+    background-color: rgb(177, 177, 177);
+}

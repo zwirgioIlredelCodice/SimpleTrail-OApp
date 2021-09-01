@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>p1</title>
+</head>
+
+<script src="script1.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>select .json event file</h1>
+    <input type="file" id="jsonData" name="jsonData" accept=".json">
+    <div>
+        <button onclick="loadFileAsText()">Load file</button>
+        <button onclick="readEvent()">Read event</button>
+        <button onclick="extractAnswers()">extract answers</button>
+    </div>
+    <h3>File content</h3>
+    <pre id="displayjson">you have to load json file</pre>
+    <h3>answers</h3>
+    <pre id="displayAnswers">you have to extract the answers</pre>
+</body>
+
+</html>

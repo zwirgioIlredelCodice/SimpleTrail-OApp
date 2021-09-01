@@ -1,0 +1,30 @@
+{
+    "event": {
+        "name": "myEvent",
+        "start": "2021-09-01T010:30:00.000Z",
+        "controlpoints": [
+            ["A", "B", "C", "Z"],
+            ["A", "B", "Z"],
+            ["A", "Z"]        ]
+    },
+    "startingrid": [
+        {
+            "id": 0,
+            "name": "Murer Fabio",
+            "category": "open",
+            "starttime": "2021-09-01T011:30:00.000Z"
+        },
+        {
+            "id": 1,
+            "name": "Giorgio Pizzo",
+            "category": "open",
+            "starttime": "2021-09-01T011:34:00.000Z"
+        },
+        {
+            "id": 2,
+            "name": "Lello Rello",
+            "category": "open",
+            "starttime": "2021-09-01T011:38:00.000Z"
+        }
+    ]
+}
