@@ -1,4 +1,6 @@
 let jsonData = JSON.parse(sessionStorage.getItem('jsonEvent'));
+let timeElapsed = 0;
+let timerID = -1;
 
 function readRace() {
     var form = document.createElement("FORM");   // Create a <form> element
@@ -20,9 +22,13 @@ function readRace() {
             document.body.appendChild(form);
         }
     }
+    timeStart();
 }
 
 function finishRace() {
+    timeStop();
+    sessionStorage.setItem('time', timeElapsed);
+    
     let myForm = document.getElementById('pointForm');
     let formData = new FormData(myForm);
     let jsonObject = {};
@@ -32,4 +38,22 @@ function finishRace() {
     let raceAnswers = JSON.stringify(jsonObject);
     sessionStorage.setItem('raceAnswers', raceAnswers);
     document.location.href = 'p4.html';
+}
+
+function tick() {
+    timeElapsed++
+    document.getElementById("time").innerHTML = timeElapsed;
+}
+
+function timeStart() {
+    if (timerID == -1) {
+        timerID = setInterval(tick, 1000);
+    }
+}
+
+function timeStop() {
+    if (timerID != -1) {
+        clearInterval(timerID)
+        timerID = -1
+    }
 }
