@@ -1,16 +1,15 @@
 {
-    "short_name": "STM",
-    "name": "Simple Temp-O App",
-    "icons": [
-      {
-        "src": "https://github.com/zwirgioIlredelCodice/mobileTempO/images/icon1.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "start_url": ".",
-    "background_color": "#3367D6",
-    "display": "standalone",
-    "theme_color": "#3367D6",
-    "description": "sas"
-  }
+  "background_color": "none",
+  "description": "sus",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Simple Trail-O App",
+  "orientation": "any",
+  "scope": "/mobileTempO/",
+  "short_name": "STA",
+  "start_url": "/mobileTempO/",
+  "theme_color": "none",
+  "categories": [],
+  "screenshots": [],
+  "shortcuts": []
+}
