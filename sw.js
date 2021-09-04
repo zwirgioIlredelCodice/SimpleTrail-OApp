@@ -1,6 +1,8 @@
+const staticCacheName = 'v1';
+
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('STM-APP').then((cache) => cache.addAll([
+    caches.open(staticCacheName).then((cache) => cache.addAll([
       '/mobileTempO/',
       '/mobileTempO/index.html',
       '/mobileTempO/index.js',
@@ -20,5 +22,17 @@ self.addEventListener('fetch', (e) => {
   console.log(e.request.url);
   e.respondWith(
     caches.match(e.request).then((response) => response || fetch(e.request)),
+  );
+});
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(keys.
+        filter(key => key !== staticCacheName)
+        .map(key => caches.delate())
+        );
+        //https://youtu.be/g9LfyCZjeKI?t=582 continuare tuturial
+    })
   );
 });
