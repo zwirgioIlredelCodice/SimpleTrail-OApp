@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "ses lul giorgio gqeq",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "trailo app",
+  "short_name": "ta",
+  "start_url": "/mobileTempO/index.html"
+}
