@@ -8,10 +8,10 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "https://zwirgioilredelcodice.github.io/mobileTempO/",
+    "start_url": ".",
     "background_color": "#3367D6",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/mobileTempO/",
     "theme_color": "#3367D6",
     "description": "sas"
   }
