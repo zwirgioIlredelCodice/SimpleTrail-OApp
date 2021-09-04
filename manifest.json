@@ -3,7 +3,7 @@
     "name": "Simple Temp-O App",
     "icons": [
       {
-        "src": "mobileTempO/images/icon1.png",
+        "src": "https://github.com/zwirgioIlredelCodice/mobileTempO/images/icon1.png",
         "type": "image/png",
         "sizes": "512x512"
       }
