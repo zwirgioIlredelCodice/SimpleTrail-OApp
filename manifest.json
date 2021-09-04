@@ -11,7 +11,6 @@
     "start_url": ".",
     "background_color": "#3367D6",
     "display": "standalone",
-    "scope": "/mobileTempO/",
     "theme_color": "#3367D6",
     "description": "sas"
   }
