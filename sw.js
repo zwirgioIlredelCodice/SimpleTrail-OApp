@@ -1,4 +1,4 @@
-const staticCacheName = 'v1';
+const staticCacheName = 'v2';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
