@@ -30,7 +30,7 @@ self.addEventListener('activate', (e) => {
     caches.keys().then(keys => {
       return Promise.all(keys.
         filter(key => key !== staticCacheName)
-        .map(key => caches.delate())
+        .map(key => caches.delate(key))
         );
     })
   );
