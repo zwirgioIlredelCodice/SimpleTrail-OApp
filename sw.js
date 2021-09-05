@@ -32,7 +32,6 @@ self.addEventListener('activate', (e) => {
         filter(key => key !== staticCacheName)
         .map(key => caches.delate())
         );
-        //https://youtu.be/g9LfyCZjeKI?t=582 continuare tuturial
     })
   );
 });
