@@ -1,4 +1,4 @@
-const staticCacheName = 'v2';
+const staticCacheName = 'v3';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
@@ -30,7 +30,7 @@ self.addEventListener('activate', (e) => {
     caches.keys().then(keys => {
       return Promise.all(keys.
         filter(key => key !== staticCacheName)
-        .map(key => caches.delate(key))
+        .map(key => caches.delete(key))
         );
     })
   );
