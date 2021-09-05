@@ -1,5 +1,4 @@
 {
-  "background_color": "white",
   "description": "ses lul giorgio gqeq",
   "display": "fullscreen",
   "icons": [
@@ -332,6 +331,11 @@
       "sizes": "192x192"
     },
     {
+      "src": "android/android-launchericon-192-192.png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
       "src": "android/android-launchericon-144-144.png",
       "sizes": "144x144"
     },
@@ -398,5 +402,7 @@
   ],
   "name": "trailo app",
   "short_name": "ta",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "start_url": "/mobileTempO/index.html"
 }
