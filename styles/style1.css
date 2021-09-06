@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #ff9419;
+  }
+  
+  /* Style the content */
+  .content {
+    background-color: #ffffff;
+    padding: 10px;
+    display:flex;
+    justify-content:center;
+  }
+  /* Style the footer */
+  .footer {
+    background-color: #ff9419;
+    padding: 10px;
+  }
