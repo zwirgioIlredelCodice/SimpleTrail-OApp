@@ -1,23 +1,27 @@
 const staticCacheName = 'v8';
 
-self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(staticCacheName).then((cache) => cache.addAll([
-      '/mobileTempO/',
-      '/mobileTempO/index.html',
-      '/mobileTempO/index.js',
-      '/mobileTempO/pages/p1.html',
-      '/mobileTempO/pages/p2.html',
-      '/mobileTempO/pages/p3.html',
-      '/mobileTempO/pages/p4.html',
-      '/mobileTempO/scripts/',
-      '/mobileTempO/scripts/s1.js',
-      '/mobileTempO/scripts/s2.js',
-      '/mobileTempO/scripts/s3.js',
-      '/mobileTempO/scripts/s4.js',
-      '/mobileTempO/styles/style1.css',
-      '/mobileTempO/images/icon.png'
-    ])),
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(staticCacheName).then(function(cache) {
+      return cache.addAll(
+        [
+          '/mobileTempO/',
+          '/mobileTempO/index.html',
+          '/mobileTempO/index.js',
+          '/mobileTempO/pages/p1.html',
+          '/mobileTempO/pages/p2.html',
+          '/mobileTempO/pages/p3.html',
+          '/mobileTempO/pages/p4.html',
+          '/mobileTempO/scripts/',
+          '/mobileTempO/scripts/s1.js',
+          '/mobileTempO/scripts/s2.js',
+          '/mobileTempO/scripts/s3.js',
+          '/mobileTempO/scripts/s4.js',
+          '/mobileTempO/styles/style1.css',
+          '/mobileTempO/images/icon.png'
+        ]
+      );
+    })
   );
 });
 
