@@ -4,7 +4,7 @@ function selectAthlete() {
     let form = document.createElement("FORM");   // Create a <form> element
     form.setAttribute("id", "participantsForm");
 
-    let participantsForm = ' <label for="athlete">Athlete id:</label>\n<select name="athlete" id="athlete">\n';
+    let participantsForm = '<div class="tocenter"><label for="athlete">Athlete id:</label>\n<select name="athlete" id="athlete"></div>\n';
 
     for (let i = 0; i < jsonData.startingrid.length; i++) {
         let formValue = jsonData.startingrid[i].id;
