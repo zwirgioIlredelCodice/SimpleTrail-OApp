@@ -1,4 +1,4 @@
-const staticCacheName = 'v4';
+const staticCacheName = 'v5';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
@@ -14,6 +14,7 @@ self.addEventListener('install', (e) => {
       '/mobileTempO/scripts/s2.js',
       '/mobileTempO/scripts/s3.js',
       '/mobileTempO/scripts/s4.js',
+      '/mobileTempO/styles/style1.css',
     ])),
   );
 });
