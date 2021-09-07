@@ -10,12 +10,14 @@
   
   /* Style the top navigation bar */
   .topnav {
+    min-height: 10%;
     overflow: hidden;
     background-color: #ff9419;
   }
   
   /* Style the content */
   .content {
+    min-height: 80%;
     background-color: #ffffff;
     padding: 10px;
     display:flex;
@@ -23,6 +25,7 @@
   }
   /* Style the footer */
   .footer {
+    min-height: 10%;
     background-color: #ff9419;
     padding: 10px;
   }
