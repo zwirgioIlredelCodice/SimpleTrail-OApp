@@ -1,4 +1,4 @@
-const staticCacheName = 'v8';
+const staticCacheName = 'v8.1';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -12,7 +12,6 @@ self.addEventListener('install', function(event) {
           '/mobileTempO/pages/p2.html',
           '/mobileTempO/pages/p3.html',
           '/mobileTempO/pages/p4.html',
-          '/mobileTempO/scripts/',
           '/mobileTempO/scripts/s1.js',
           '/mobileTempO/scripts/s2.js',
           '/mobileTempO/scripts/s3.js',
