@@ -2,14 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>simple trail-o app</title>
+        <title>Simple Trail-O App</title>
+        <link rel="stylesheet" href="../styles/style1.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <script src="../scripts/s1.js"></script>
     <body>
-        <h1>simple trail-o app</h1>
-        <h1>select .json event file</h1>
-        <p>select .json file event</p>
-        <input type="file" id="jsonData" name="jsonData" accept=".json"><br>
-        <button type=“button” onclick="loadJsonEvent()">START</button>
+        <div class="topnav">
+            <h1>Select .json event file</h1>
+        </div>
+        <div class="content">
+            <input type="file" id="jsonData" name="jsonData" accept=".json"><br>
+            <button type=“button” onclick="loadJsonEvent()"><b>START</b></button>
+        </div>
     </body>
 </html>

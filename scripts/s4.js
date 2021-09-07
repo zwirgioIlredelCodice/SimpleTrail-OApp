@@ -10,7 +10,7 @@ function showSummary() {
 
 function exitRace() {
     sessionStorage.clear();
-    document.location.href = 'p1.html';
+    document.location.href = '../index.html';
 }
 
 function download() {

@@ -6,22 +6,26 @@ function readRace() {
     var form = document.createElement("FORM");   // Create a <form> element
     form.setAttribute("id", "pointForm");
 
-    let pointForm = '';
+    let pointForm = '<div class="tocenter">';
 
     for (let i = 0; i < jsonData.event.controlpoints.length; i++) {
 
         pointForm = pointForm + '<p>point ' + (i + 1) + '</p><br>';
 
+        pointForm = pointForm + '<div class="tocolor">';
         for (let y = 0; y < jsonData.event.controlpoints[i].length; y++) {
             let point = jsonData.event.controlpoints[i][y];
             pointForm = pointForm + '<input type="radio" id="' + point + '" name="point' + i + '" value="' + point + '">\n' + '<label for="' + point + '">' + point + '</label>\n';
 
         }
+        pointForm = pointForm + '</div>';
+
         form.innerHTML = pointForm;
         if (document.getElementById('pointForm') == null) { //if this element is not created yet
             document.body.appendChild(form);
         }
     }
+    pointForm = pointForm + '</div>'
     timeStart();
 }
 

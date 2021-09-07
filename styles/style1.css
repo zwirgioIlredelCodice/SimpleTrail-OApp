@@ -13,16 +13,80 @@
     overflow: hidden;
     background-color: #ff9419;
   }
+
+  .topnav h1 {
+    text-align: center;
+  }
   
   /* Style the content */
   .content {
     background-color: #ffffff;
     padding: 10px;
-    display:flex;
-    justify-content:center;
   }
 
-  .content img {
-    max-width: 100%;
-    max-height: auto;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    background-color: #ff9419; /* Green */
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
+
+  .tocenter  {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tocolor {
+    background-color: #ff9419;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  input[type="file"] {
+    background-color: #ff9419; /* Green */
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
+
+  select {
+    background-color: #ff9419; /* Green */
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
   }
