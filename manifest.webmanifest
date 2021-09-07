@@ -1,6 +1,6 @@
 {
   "description": "ses lul giorgio gqeq",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "windows10/SmallTile.scale-100.png",
