@@ -19,7 +19,7 @@ self.addEventListener('install', (e) => {
       '/mobileTempO/styles/',
       '/mobileTempO/styles/style1.css',
       '/mobileTempO/images/',
-      '/mobileTempO/images/icon.png',
+      '/mobileTempO/images/icon.png'
     ])),
   );
 });
