@@ -400,9 +400,9 @@
       "sizes": "16x16"
     }
   ],
-  "name": "trailo app",
-  "short_name": "ta",
+  "name": "Simple Trail-O App",
+  "short_name": "STA",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "start_url": "/mobileTempO/index.html"
+  "start_url": "/SimpleTrail-OApp/index.html"
 }

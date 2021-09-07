@@ -2,6 +2,6 @@
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/mobileTempO/sw.js')
+    .register('/SimpleTrail-OApp/sw.js')
     .then(() => { console.log('Service Worker Registered'); });
 }

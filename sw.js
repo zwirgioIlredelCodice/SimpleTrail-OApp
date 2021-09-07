@@ -1,23 +1,23 @@
-const staticCacheName = 'v8.1';
+const staticCacheName = 'v8.2';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
       return cache.addAll(
         [
-          '/mobileTempO/',
-          '/mobileTempO/index.html',
-          '/mobileTempO/index.js',
-          '/mobileTempO/pages/p1.html',
-          '/mobileTempO/pages/p2.html',
-          '/mobileTempO/pages/p3.html',
-          '/mobileTempO/pages/p4.html',
-          '/mobileTempO/scripts/s1.js',
-          '/mobileTempO/scripts/s2.js',
-          '/mobileTempO/scripts/s3.js',
-          '/mobileTempO/scripts/s4.js',
-          '/mobileTempO/styles/style1.css',
-          '/mobileTempO/images/icon.png'
+          '/SimpleTrail-OApp/',
+          '/SimpleTrail-OApp/index.html',
+          '/SimpleTrail-OApp/index.js',
+          '/SimpleTrail-OApp/pages/p1.html',
+          '/SimpleTrail-OApp/pages/p2.html',
+          '/SimpleTrail-OApp/pages/p3.html',
+          '/SimpleTrail-OApp/pages/p4.html',
+          '/SimpleTrail-OApp/scripts/s1.js',
+          '/SimpleTrail-OApp/scripts/s2.js',
+          '/SimpleTrail-OApp/scripts/s3.js',
+          '/SimpleTrail-OApp/scripts/s4.js',
+          '/SimpleTrail-OApp/styles/style1.css',
+          '/SimpleTrail-OApp/images/icon.png'
         ]
       );
     })
