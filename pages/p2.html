@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Simple Trail-O App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/style1.css">
-    </head>
-    <script src="../scripts/s2.js"></script>
-    <body onload="selectAthlete()"> <!--to load function only after body is loaded-->
-        <div class="topnav">
-            <h1>chose athlete</h1>
-        </div>
-        <!--qua ssi crea il form -->
-        <button type=“button” onclick="startRace()">START</button>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Trail-O App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style1.css">
+</head>
+<script src="../scripts/s2.js"></script>
+
+<body onload="selectAthlete()">
+    <!--to load function only after body is loaded-->
+    <div class="topnav">
+        <h1>chose athlete</h1>
+    </div>
+    <div class="content">
+        <form id="participantsForm">
+            <div class="tocenter"><label for="athlete">Athlete id:</label>
+                <select name="athlete" id="athlete">
+                </select>
+            </div>
+        </form>
+    </div>
+    <button type=“button” onclick="startRace()">START</button>
+</body>
+
 </html>
