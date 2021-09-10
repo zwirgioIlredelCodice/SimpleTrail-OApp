@@ -91,3 +91,18 @@
     margin-right: auto;
     border-radius: 12px;
   }
+
+  .block {
+    position:relative;
+    background-color: #ff9419;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .block input:checked ~ i {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }

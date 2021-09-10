@@ -12,7 +12,7 @@ function readRace() {
         div1.appendChild(p);
         
         let div2 = document.createElement('div');
-        div2.setAttribute('class','tocolor');
+        div2.setAttribute('class','block');
         
         for (let y = 0; y < jsonData.event.controlpoints[i].length; y++) {
             let point = jsonData.event.controlpoints[i][y];
@@ -21,17 +21,28 @@ function readRace() {
             input.setAttribute('id', point);
             input.setAttribute('name', ('point'+i));
             input.setAttribute('value', point);
+            input.setAttribute('onchange', 'setPoint(this)')
             div2.appendChild(input);
 
             let label  = document.createElement('label');
             label.setAttribute('for', point);
             label.innerText = point;
             div2.appendChild(label);
+
+            div2.appendChild(document.createElement('i'));
         }
         div1.appendChild(div2);
     }
     timeStart();
-} 
+}
+
+function setPoint(radio) {
+    var r = confirm('You have chosen ' + radio.value + '\n If you if you click OK the the answer cannot be changed');
+    
+    if (r == false) {
+        radio.checked = false;
+    }
+}
 
 function finishRace() {
     timeStop();
