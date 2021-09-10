@@ -30,6 +30,7 @@
     margin-right: auto;
     width: 100%;
     height: auto;
+    max-width: 512px;
   }
 
   button {
@@ -83,10 +84,25 @@
     text-align: center;
     text-decoration: none;
     display: block;
-    
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
     border-radius: 12px;
+  }
+
+  .block {
+    position:relative;
+    background-color: #ff9419;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .block input:checked ~ i {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
   }

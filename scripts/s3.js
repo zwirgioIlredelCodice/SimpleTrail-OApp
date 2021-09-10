@@ -3,30 +3,45 @@ let timeElapsed = 0;
 let timerID = -1;
 
 function readRace() {
-    var form = document.createElement("FORM");   // Create a <form> element
-    form.setAttribute("id", "pointForm");
-
-    let pointForm = '<div class="tocenter">';
+    let div1 = document.getElementById('div1');
 
     for (let i = 0; i < jsonData.event.controlpoints.length; i++) {
-
-        pointForm = pointForm + '<p>point ' + (i + 1) + '</p><br>';
-
-        pointForm = pointForm + '<div class="tocolor">';
+        
+        let p = document.createElement('p');
+        p.innerText = 'point ' + (i+1);
+        div1.appendChild(p);
+        
+        let div2 = document.createElement('div');
+        div2.setAttribute('class','block');
+        
         for (let y = 0; y < jsonData.event.controlpoints[i].length; y++) {
             let point = jsonData.event.controlpoints[i][y];
-            pointForm = pointForm + '<input type="radio" id="' + point + '" name="point' + i + '" value="' + point + '">\n' + '<label for="' + point + '">' + point + '</label>\n';
+            let input = document.createElement('input')
+            input.setAttribute('type', 'radio');
+            input.setAttribute('id', point);
+            input.setAttribute('name', ('point'+i));
+            input.setAttribute('value', point);
+            input.setAttribute('onchange', 'setPoint(this)')
+            div2.appendChild(input);
 
-        }
-        pointForm = pointForm + '</div>';
+            let label  = document.createElement('label');
+            label.setAttribute('for', point);
+            label.innerText = point;
+            div2.appendChild(label);
 
-        form.innerHTML = pointForm;
-        if (document.getElementById('pointForm') == null) { //if this element is not created yet
-            document.body.appendChild(form);
+            div2.appendChild(document.createElement('i'));
         }
+        div1.appendChild(div2);
     }
-    pointForm = pointForm + '</div>'
     timeStart();
+}
+
+function setPoint(radio) {
+    var r = confirm('You have chosen ' + radio.value + '\n If you if you click OK the the answer cannot be changed');
+    
+    if (r == false) {
+        radio.checked = false;
+    }
 }
 
 function finishRace() {

@@ -1,4 +1,4 @@
-const staticCacheName = 'v8.3';
+const staticCacheName = 'v8.4';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(

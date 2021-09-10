@@ -1,22 +1,14 @@
 let jsonData = JSON.parse(sessionStorage.getItem('jsonEvent'));
 
 function selectAthlete() {
-    let form = document.createElement("FORM");   // Create a <form> element
-    form.setAttribute("id", "participantsForm");
-
-    let participantsForm = '<div class="tocenter"><label for="athlete">Athlete id:</label>\n<select name="athlete" id="athlete"></div>\n';
-
     for (let i = 0; i < jsonData.startingrid.length; i++) {
         let formValue = jsonData.startingrid[i].id;
+        let node = document.createElement('option');
+        node.setAttribute('value', formValue);
+        let textnode = document.createTextNode('id:' + formValue + ' name: ' + jsonData.startingrid[i].name);
+        node.appendChild(textnode);
+        document.getElementById("athlete").appendChild(node);
 
-        participantsForm = participantsForm + '<option value="' + formValue + '">' + formValue + '</option>\n';
-
-    }
-    participantsForm = participantsForm + '</select><br>\n'
-
-    form.innerHTML = participantsForm;
-    if (document.getElementById('participantsForm') == null) { //if this element is not created yet
-        document.body.appendChild(form);
     }
 }
 
